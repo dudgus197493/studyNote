@@ -1,0 +1,1 @@
+왼쪽 자식-오른쪽 형제 트리(LeftChild-RightSibling Tree)에 대한 생각 정리

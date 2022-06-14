@@ -1,0 +1,1 @@
+단순 이진 트리(Simple Binary Tree)에 대한 생각 정리
