@@ -36,12 +36,10 @@
 #include<stdio.h>
 #include<stdlib.h>
 
-typedef int ElementType;
-
 enum VisitMode {Visited, NotVisited};
 
 typedef struct _tagVertex {
-	ElementType data;
+	int data;
 	int visited;
 	int index;
 
@@ -67,7 +65,7 @@ Graph* createGraph();
 void destroyGraph(Graph* _pGraph);
 
 // 정점 생성
-Vertex* createVertex(ElementType _data);
+Vertex* createVertex(int _data);
 // 정점 소멸
 void destroyVertex(Vertex* _pVertex);
 
