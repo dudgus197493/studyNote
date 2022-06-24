@@ -51,7 +51,7 @@ Edge* createEdge(Vertex* _from, Vertex* _target, int _weight)
 	Edge* newEdge = (Edge*)malloc(sizeof(Edge));		 // 간선 크기의 자동메모리 할당
 	newEdge->from = _from;									 // 간선의 출발지점 매개변수로 받아 할당
 	newEdge->target = _target;								 // 간선의 도착지점 매개변수로 받아 할당
-	newEdge->weight = 0;									 // 간선의 가중치 0으로 초기화
+	newEdge->weight = _weight;									 // 간선의 가중치 0으로 초기화
 	newEdge->next = NULL;									 // 다음 간선의 포인터 NULL로 초기화
 	return newEdge;
 }
@@ -63,20 +63,21 @@ void destroyEdge(Edge* _pRemove)
 
 void addVertex(Graph* _pGraph, Vertex* _pNewVertex)
 {
+	Vertex* vertices = _pGraph->vertices;
 	// 그래프가 비어있을 때
-	if (_pGraph->vertices == NULL) {
+	if (vertices == NULL) {
 		_pGraph->vertices = _pNewVertex;
 	}
 	else {	// 그래프의 정점이 1개 이상 있을 때
 		// 그래프가 가지고 있는 정점 리스트의 꼬리 찾기
-		Vertex* vertices = _pGraph->vertices;
+		
 		while (vertices->next != NULL) {
 			vertices = vertices->next;
 		}
 		// 꼬리 노드를 찾았다면 꼬리노드의 다음노드로 _pVertiex주소 할당
 		vertices->next = _pNewVertex;
 	}
-	// 그래프의 정점 갯수 카운터 증가
+	// 정점의 인덱스값 && 그래프의 정점 갯수 카운터 증가
 	_pNewVertex->index = _pGraph->vertexCount++;
 }
 
@@ -105,7 +106,7 @@ void printGraph(Graph* _pGraph)
 	}
 	
 	while (vertices != NULL) {
-		printf("%c : ", vertices->data);	// 정점이 가진 데이터 출력
+		printf("%c: ", vertices->data);	// 정점이 가진 데이터 출력
 
 		Edge* edge = vertices->adgacenctList;
 		if (edge == NULL) {						// 정점이 가진 간선이 없다면

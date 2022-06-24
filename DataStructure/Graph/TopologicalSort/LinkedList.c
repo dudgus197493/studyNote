@@ -1,18 +1,17 @@
-#include <iostream>
 #include "LinkedList.h";
 
 void InitList(LinkedList* _pList)
 {
 	_pList->iCount = 0;
-	_pList->pHeadNode = nullptr;
+	_pList->pHeadNode = NULL;
 }
 
-void PushBack(LinkedList* _pList, int _iData)
+void PushBack(LinkedList* _pList, Vertex* _Data)
 {
 	// 1. Node를 만들고 데이터 채우기
 	Node* pNewNode = (Node*)malloc(sizeof(Node));
-	pNewNode->iData = _iData;
-	pNewNode->pNextNode = nullptr;
+	pNewNode->Data = _Data;
+	pNewNode->pNextNode = NULL;
 
 	// 2. 첫번째 노드인지 확인
 	if (_pList->iCount == 0) {
@@ -31,11 +30,11 @@ void PushBack(LinkedList* _pList, int _iData)
 	++_pList->iCount;
 }
 
-void PushFront(LinkedList* _pList, int _iData)
+void PushFront(LinkedList* _pList, Vertex* _Data)
 {
 	// 데이터 노드 생성
 	Node* pNewNode = (Node*)malloc(sizeof(Node));
-	pNewNode->iData = _iData;						// Data 삽입
+	pNewNode->Data = _Data;						// Data 삽입
 	pNewNode->pNextNode = _pList->pHeadNode;		// 새로운 노드의 next로 list의 헤드노드를 연결
 	_pList->pHeadNode = pNewNode;					// 리스트의 헤드노드 포인터를 새로운 노드로 갱신
 	

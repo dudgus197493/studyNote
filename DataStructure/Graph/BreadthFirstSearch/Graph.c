@@ -77,7 +77,7 @@ void addVertex(Graph* _pGraph, Vertex* _pNewVertex)
 		vertices->next = _pNewVertex;
 	}
 	// 그래프의 정점 갯수 카운터 증가
-	_pGraph->vertexCount++;	
+	_pNewVertex->index = _pGraph->vertexCount++;
 }
 
 void addEdge(Vertex* _pVertex, Edge* _pNewEdge)

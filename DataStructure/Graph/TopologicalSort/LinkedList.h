@@ -1,5 +1,4 @@
-#include <stdio.h>
-
+#include "Graph.h"
 
 // 가변배열과 연결형 리스트는 겉보기는 유사하지만
 // 가변 배열은 힙 메모리에 연속된 메모리를 잡아놓고
@@ -9,7 +8,7 @@
 // 데이터(노드)끼리 연결한다.
 
 typedef struct _tagNode {
-	int iData;					// 자신이 가지는 데이터
+	Vertex* Data;					// 자신이 가지는 데이터
 	struct _tagNode* pNextNode;		// 자신의 다음 노드(데이터)
 } Node;
 
@@ -29,9 +28,9 @@ typedef struct _tagList {
 void InitList(LinkedList* _pList);
 
 // 연결형 리스트 데이터 추가
-void PushBack(LinkedList* _pList, int _iData);
+void PushBack(LinkedList* _pList, Vertex* _Data);
 
-void PushFront(LinkedList* _pList, int _iData);
+void PushFront(LinkedList* _pList, Vertex* _Data);
 
 // 리스트 메모리 해제
 void ReleaseList(LinkedList* _pList);

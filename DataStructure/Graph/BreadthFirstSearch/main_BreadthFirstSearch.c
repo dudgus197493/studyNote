@@ -8,7 +8,7 @@ void breadthFirstSearch(Vertex* _pVertex, LinkedQueue* _pQueue) {
 		printf("%d ", pVertex->data);
 		Edge* pEdge = pVertex->adgacenctList;					// 꺼낸 정점이 가지고있는 간선 리스트
 		while (pEdge != NULL) {
-			if (pEdge->target->visited == NotVisited) {			// 간선이 가리키는 다음 정점이 한번도 방문하지 않았다면
+			if (pEdge->target != NULL && pEdge->target->visited == NotVisited) {			// 간선이 가리키는 다음 정점이 한번도 방문하지 않았다면
 				pEdge->target->visited = Visited;				// 간선이 가리키는 정점 방문함 갱신 하고 큐에 넣기
 				enQueue(_pQueue, pEdge->target);
 			}
