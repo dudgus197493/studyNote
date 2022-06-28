@@ -16,7 +16,7 @@ int SequentialSearch(LinkedList* _pList, int _target) {
 // 자기 구성 순차 탐색(Self-Organizing Sequential Search)
 // 자주찾는 항목, 자주 사용하는 항목들을 다른 항목보다 우선하여 접근할 수 있게 배치
 // 1. 전진 이동법(Move To Front)
-// - 어느 항목이 한번 탐새괴고 나면, 그 항목을 데이터 집합의 가장 앞에 위치시키는 방법
+// - 어느 항목이 한번 탐색되고 나면, 그 항목을 데이터 집합의 가장 앞에 위치시키는 방법
 // - 한번 탐색된 항목이 곧 이어서 또 다시 검색될 가능성이 높은 데이터 집합에서만 사용
 Node* MovetoFront(LinkedList* list, int _target) {
 	Node* current = list->pHeadNode;
