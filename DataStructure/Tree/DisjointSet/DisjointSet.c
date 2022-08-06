@@ -17,6 +17,8 @@ DisjointSet* FindSet(DisjointSet* _pNode)
 	return parentSet;
 }
 
+
+
 DisjointSet* createNode(void* _Data)
 {
 	DisjointSet* newNode = (DisjointSet *) malloc(sizeof(DisjointSet));
