@@ -1,4 +1,4 @@
-package sutdy.tonic.note.dataStructure.variableArray;
+package study.tonic.note.dataStructure.variableArray;
 
 public class VariableArray {
 	private Object[] arr;

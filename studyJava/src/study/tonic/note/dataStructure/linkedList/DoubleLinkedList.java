@@ -1,4 +1,4 @@
-package sutdy.tonic.note.dataStructure.linkedList;
+package study.tonic.note.dataStructure.linkedList;
 
 class DoubleNode{
 	public Object data;
@@ -62,7 +62,7 @@ public class DoubleLinkedList {
 			
 			// newNode의 prevNode에 현재 꼬리노드를 저장
 			newNode.prevNode = this.tail;
-			
+
 			// 리스트의 꼬리노드를 newNode로 갱신
 			this.tail = newNode;
 		}
