@@ -94,21 +94,21 @@ public class DoubleLinkedList {
 		
 		// 예외 처리
 		if(index > this.size) {						// index가 리스트의 크기보다 크면
-			return null;
+			return null;							// null 반환
 		}
 		
 		DoubleNode currentNode;
-		if(index <= this.size / 2) {			// index가 리스트의 중간보다 작으면
+		if(index <= this.size / 2) {				// index가 리스트의 중간보다 작으면
 			System.out.println("중간보다 작음");
-			currentNode = this.head;
+			currentNode = this.head;				// 리스트의 헤드노드부터 탐색
 			for(int i =0; i<index; i++) {
 				currentNode = currentNode.nextNode;
 			}
 			
 		} else {
 			System.out.println("중간보다 큼");
-			currentNode = this.tail;
-			int count = this.size - (index + 1);
+			currentNode = this.tail;				// 리스트의 꼬리노드부터 탐색
+			int count = this.size - (index + 1);	
 			
 			for(int i =0; i<count; i++) {
 				currentNode = currentNode.prevNode;
