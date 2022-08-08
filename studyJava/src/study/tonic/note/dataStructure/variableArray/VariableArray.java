@@ -1,7 +1,7 @@
 package study.tonic.note.dataStructure.variableArray;
 
 public class VariableArray {
-	private Object[] arr;
+	public Object[] arr;
 	public int capacity;
 	public int usedSize;
 	
