@@ -1,4 +1,4 @@
-package study.tonic.note.dataStructure.linkedList;
+package study.note.dataStructure.linkedList;
 
 class SingleNode {
 	public Object data;

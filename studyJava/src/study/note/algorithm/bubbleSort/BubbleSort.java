@@ -1,6 +1,6 @@
-package study.tonic.note.algorithm.bubbleSort;
+package study.note.algorithm.bubbleSort;
 
-import study.tonic.note.dataStructure.variableArray.*;
+import study.note.dataStructure.variableArray.*;
 
 
 public class BubbleSort {

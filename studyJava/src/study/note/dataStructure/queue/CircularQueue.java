@@ -1,4 +1,4 @@
-package study.tonic.note.dataStructure.queue;
+package study.note.dataStructure.queue;
 
 public class CircularQueue {
 	private Object[] queue;
@@ -48,8 +48,7 @@ public class CircularQueue {
 		}
 		return pop;
 	}
-	
-	
+
 	// 큐 출력
 	public void printQueue() {
 		System.out.printf("Capacity : %d, UsedSize : %d\n", this.capacity, this.usedSize);

@@ -1,4 +1,4 @@
-package study.tonic.note.dataStructure.queue;
+package study.note.dataStructure.queue;
 
 
 class LinkedNode {
