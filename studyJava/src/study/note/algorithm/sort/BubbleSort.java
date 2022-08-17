@@ -1,4 +1,4 @@
-package study.note.algorithm.bubbleSort;
+package study.note.algorithm.sort;
 
 import study.note.dataStructure.variableArray.*;
 
